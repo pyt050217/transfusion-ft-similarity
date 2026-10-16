@@ -1,0 +1,32 @@
+# Patient / clinical data
+data.csv
+data/
+processed_ft/
+*_index.csv
+*.csv
+
+# Large/raw arrays
+*.npz
+*.npy
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Conda
+.conda/
+
+# Editors
+.vscode/
+.idea/
+
+# Secrets
+.env
+.env.*
+*.key
+*.pem
+
+# OS
+.DS_Store

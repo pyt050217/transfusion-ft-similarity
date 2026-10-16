@@ -1,0 +1,104 @@
+Loading datasets...
+Train: torch.Size([744658, 5]) torch.Size([744658, 26]) torch.Size([744658])
+Val: torch.Size([93108, 5]) torch.Size([93108, 26]) torch.Size([93108])
+Test: torch.Size([92798, 5]) torch.Size([92798, 26]) torch.Size([92798])
+
+Device: cuda
+Trainable parameters: 199577
+Positive samples: 22421
+Negative samples: 722237
+Positive weight: 32.21252397306097
+Epoch 01 Step 0200/1455 Loss 0.8792
+Epoch 01 Step 0400/1455 Loss 0.5771
+Epoch 01 Step 0600/1455 Loss 0.9335
+Epoch 01 Step 0800/1455 Loss 0.4298
+Epoch 01 Step 1000/1455 Loss 0.4740
+Epoch 01 Step 1200/1455 Loss 0.5433
+Epoch 01 Step 1400/1455 Loss 0.4779
+
+Epoch 01 | loss=0.6034 | ROC-AUC=0.9551 | PR-AUC=0.4265 | Precision=0.1516 | Recall=0.9428 | F1=0.2613
+Saved new best model.
+Epoch 02 Step 0200/1455 Loss 0.4589
+Epoch 02 Step 0400/1455 Loss 0.4064
+Epoch 02 Step 0600/1455 Loss 0.5454
+Epoch 02 Step 0800/1455 Loss 0.6340
+Epoch 02 Step 1000/1455 Loss 0.3963
+Epoch 02 Step 1200/1455 Loss 0.4197
+Epoch 02 Step 1400/1455 Loss 0.5291
+
+Epoch 02 | loss=0.4753 | ROC-AUC=0.9614 | PR-AUC=0.5003 | Precision=0.1827 | Recall=0.9204 | F1=0.3049
+Saved new best model.
+Epoch 03 Step 0200/1455 Loss 0.4932
+Epoch 03 Step 0400/1455 Loss 0.4522
+Epoch 03 Step 0600/1455 Loss 0.3329
+Epoch 03 Step 0800/1455 Loss 0.3996
+Epoch 03 Step 1000/1455 Loss 0.4171
+Epoch 03 Step 1200/1455 Loss 0.3232
+Epoch 03 Step 1400/1455 Loss 0.4929
+
+Epoch 03 | loss=0.4361 | ROC-AUC=0.9634 | PR-AUC=0.5166 | Precision=0.1860 | Recall=0.9279 | F1=0.3098
+Saved new best model.
+Epoch 04 Step 0200/1455 Loss 0.4507
+Epoch 04 Step 0400/1455 Loss 0.3998
+Epoch 04 Step 0600/1455 Loss 0.4253
+Epoch 04 Step 0800/1455 Loss 0.4630
+Epoch 04 Step 1000/1455 Loss 0.4237
+Epoch 04 Step 1200/1455 Loss 0.3843
+Epoch 04 Step 1400/1455 Loss 0.4512
+
+Epoch 04 | loss=0.4199 | ROC-AUC=0.9630 | PR-AUC=0.5148 | Precision=0.1957 | Recall=0.9190 | F1=0.3226
+Epoch 05 Step 0200/1455 Loss 0.3945
+Epoch 05 Step 0400/1455 Loss 0.3681
+Epoch 05 Step 0600/1455 Loss 0.3813
+Epoch 05 Step 0800/1455 Loss 0.4184
+Epoch 05 Step 1000/1455 Loss 0.3906
+Epoch 05 Step 1200/1455 Loss 0.2919
+Epoch 05 Step 1400/1455 Loss 0.3849
+
+Epoch 05 | loss=0.4093 | ROC-AUC=0.9639 | PR-AUC=0.5246 | Precision=0.2051 | Recall=0.9058 | F1=0.3344
+Saved new best model.
+Epoch 06 Step 0200/1455 Loss 0.4820
+Epoch 06 Step 0400/1455 Loss 0.4078
+Epoch 06 Step 0600/1455 Loss 0.3631
+Epoch 06 Step 0800/1455 Loss 0.3905
+Epoch 06 Step 1000/1455 Loss 0.3948
+Epoch 06 Step 1200/1455 Loss 0.3915
+Epoch 06 Step 1400/1455 Loss 0.4141
+
+Epoch 06 | loss=0.4001 | ROC-AUC=0.9635 | PR-AUC=0.5272 | Precision=0.1869 | Recall=0.9261 | F1=0.3110
+Saved new best model.
+Epoch 07 Step 0200/1455 Loss 0.2847
+Epoch 07 Step 0400/1455 Loss 0.2248
+Epoch 07 Step 0600/1455 Loss 0.5094
+Epoch 07 Step 0800/1455 Loss 0.2847
+Epoch 07 Step 1000/1455 Loss 0.3772
+Epoch 07 Step 1200/1455 Loss 0.3885
+Epoch 07 Step 1400/1455 Loss 0.3127
+
+Epoch 07 | loss=0.3916 | ROC-AUC=0.9635 | PR-AUC=0.5315 | Precision=0.1839 | Recall=0.9240 | F1=0.3068
+Saved new best model.
+Epoch 08 Step 0200/1455 Loss 0.5823
+Epoch 08 Step 0400/1455 Loss 0.3777
+Epoch 08 Step 0600/1455 Loss 0.4480
+Epoch 08 Step 0800/1455 Loss 0.2691
+Epoch 08 Step 1000/1455 Loss 0.3258
+Epoch 08 Step 1200/1455 Loss 0.3819
+Epoch 08 Step 1400/1455 Loss 0.3570
+
+Epoch 08 | loss=0.3845 | ROC-AUC=0.9635 | PR-AUC=0.5324 | Precision=0.2074 | Recall=0.9048 | F1=0.3374
+Saved new best model.
+
+Loading best checkpoint...
+
+===================================
+FINAL RESULTS
+===================================
+Best epoch: 8
+Best validation PR-AUC: 0.5324227588345135
+Test roc_auc: 0.9642
+Test pr_auc: 0.5188
+Test precision: 0.2082
+Test recall: 0.9096
+Test f1: 0.3388
+
+Training finished.

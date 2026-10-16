@@ -1,0 +1,52 @@
+Loading data...
+Raw rows: 930564
+Raw patients: 683736
+
+Cleaning categorical variables...
+Cleaning numeric variables...
+
+Creating patient-level split...
+
+[TRAIN]
+Rows: 744658
+Patients: 546988
+Positive rows: 22421
+Positive row rate: 3.0109%
+
+[VAL]
+Rows: 93108
+Patients: 68374
+Positive rows: 2814
+Positive row rate: 3.0223%
+
+[TEST]
+Rows: 92798
+Patients: 68374
+Positive rows: 2810
+Positive row rate: 3.0281%
+
+Fitting categorical metadata from TRAIN only...
+Fitting numeric metadata from TRAIN only...
+
+Transforming TRAIN...
+Transforming VAL...
+Transforming TEST...
+
+Saving processed datasets...
+
+Category sizes:
+性别: 5
+入院科室: 83
+手术类型: 6
+麻醉分级: 9
+术前主诊断编码: 2395
+
+Array shapes:
+train x_categ = (744658, 5) x_cont = (744658, 26) y = (744658,)
+val x_categ = (93108, 5) x_cont = (93108, 26) y = (93108,)
+test x_categ = (92798, 5) x_cont = (92798, 26) y = (92798,)
+
+Output directory:
+/root/transfusion/processed_ft
+
+Preprocessing finished successfully.
