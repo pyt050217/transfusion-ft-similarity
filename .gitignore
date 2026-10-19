@@ -30,3 +30,12 @@ venv/
 
 # OS
 .DS_Store
+
+# Local processed clinical datasets
+processed*/
+# Local training outputs and model checkpoints
+experiments/*/output/
+*.pt
+*.pth
+*.ckpt
+*.log

@@ -1,4 +1,5 @@
 import json
+import os
 import random
 from pathlib import Path
 
@@ -14,8 +15,22 @@ from sklearn.model_selection import train_test_split
 SEED = 42
 RARE_MIN_COUNT = 20
 
-DATA_PATH = "/root/transfusion/data.csv"
-OUT_DIR = Path("/root/transfusion/processed_ft")
+# Repository root and configurable local data paths.
+REPO_ROOT = Path(__file__).resolve().parents[1]
+
+DATA_PATH = Path(
+    os.environ.get(
+        "TRANSFUSION_DATA_PATH",
+        str(REPO_ROOT / "data" / "data.csv"),
+    )
+).expanduser()
+
+OUT_DIR = Path(
+    os.environ.get(
+        "TRANSFUSION_PREPROCESS_OUTPUT_DIR",
+        str(REPO_ROOT / "data" / "processed_ft"),
+    )
+).expanduser()
 
 TRAIN_RATIO = 0.80
 VAL_RATIO = 0.10

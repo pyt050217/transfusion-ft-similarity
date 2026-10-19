@@ -1,4 +1,6 @@
 import json
+import os
+import sys
 from pathlib import Path
 
 import numpy as np
@@ -15,6 +17,24 @@ from sklearn.metrics import (
     f1_score,
 )
 
+# Locate the model implementation bundled with this repository.
+_THIS_FILE = Path(__file__).resolve()
+REPO_ROOT = next(
+    (
+        parent for parent in _THIS_FILE.parents
+        if (parent / "vendor" / "tab-transformer-pytorch").is_dir()
+    ),
+    None,
+)
+if REPO_ROOT is None:
+    raise FileNotFoundError(
+        "Cannot locate vendor/tab-transformer-pytorch. "
+        "Run this script from a complete repository checkout."
+    )
+sys.path.insert(
+    0, str(REPO_ROOT / "vendor" / "tab-transformer-pytorch")
+)
+
 from tab_transformer_pytorch import FTTransformer
 
 
@@ -24,8 +44,18 @@ from tab_transformer_pytorch import FTTransformer
 
 SEED = 42
 
-DATA_DIR = Path("/root/transfusion/processed_ft")
-OUTPUT_DIR = Path("/root/transfusion/ft_outputs")
+DATA_DIR = Path(
+    os.environ.get(
+        "TRANSFUSION_DATA_DIR",
+        str(REPO_ROOT / "data" / "processed_ft"),
+    )
+).expanduser()
+OUTPUT_DIR = Path(
+    os.environ.get(
+        "TRANSFUSION_OUTPUT_DIR",
+        str(REPO_ROOT / "experiments" / "ft_rbc_baseline_seed42" / "output"),
+    )
+).expanduser()
 
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
